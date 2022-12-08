@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Tous les articles</h1>
+</div>
+
+<div class="lien">
+    <%= link_to 'Créer un article', new_article_path %>
+</div>
+
+<div class="form">
+    <table>
+        <tr>
+            <th>Titre</th>
+            <th>Description</th>
+        </tr>
+
+        <% @articles.each do |article| %>
+        <tr>
+            <td> <%= article.title %> </td>
+            <td> <%= article.description %> </td>
+            <td> <%= link_to 'modifier', edit_article_path(article) %> </td>
+            <td> <%= link_to 'afficher', article_path(article) %> </td>
+        </tr>
+
+        <% end %>
+
+    </table>
+</div>

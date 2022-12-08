@@ -55,7 +55,7 @@
 }
 
 .container {
-    padding: 100px;
+    padding: 80px;
     font-size: 2em;
     text-align: center;
     color: white;
@@ -64,4 +64,34 @@
 
 .container p {
     padding-top: 30px;
+}
+
+.form {
+    padding-left: 30px;
+    font-size: 1.2em;
+}
+
+.form a {
+    padding: 10px;
+}
+
+.form p {
+    padding: 5px;
+}
+
+.form td {
+    padding: 5px;
+}
+
+.lien {
+    padding-top: 20px;
+    padding-left: 40px;
+    color: cornflowerblue;
+}
+
+.error {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.2em;
+    color: brown;
 }

@@ -1,0 +1,9 @@
+<div class="container">
+    <h1> <%= @article.title %> </h1>
+    <p> <%= @article.description %> </p>
+</div>
+
+<div class="form">
+    <%= link_to "Tout les articles", articles_path %> | 
+    <%= link_to "Modifier l'article", edit_article_path(@article) %>
+</div>
