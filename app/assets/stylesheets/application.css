@@ -13,12 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
  * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    margin-top: auto;
+    display: flex;
 }
 
 .navbar {
@@ -67,26 +85,95 @@
 }
 
 .form {
-    padding-left: 30px;
+    display: flex;
+    justify-content: center;
     font-size: 1.2em;
-}
-
-.form a {
-    padding: 10px;
-}
-
-.form p {
-    padding: 5px;
+    padding-bottom: 60px;
 }
 
 .form td {
     padding: 5px;
 }
 
+.form .box {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    background: linear-gradient(151.22deg, #8348FF -13.04%, #0785F3 83.6%);
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.form .box .edit_article {
+    width: 75%;
+    margin-top: 10px;
+}
+
+.form .box .new_article {
+    width: 75%;
+    margin-top: 10px;
+}
+
+.form .box .champ {
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.form .box .champ input {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 16px;
+    color: rgba(85, 85, 85, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.form .box .champ textarea {
+    width: 100%;
+    height: 200px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 16px;
+    color: rgba(85, 85, 85, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    resize: none;
+}
+
+.form .box .champ-button input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 6px 25px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: white;
+    color: rgba(85, 85, 85, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
 .lien {
-    padding-top: 20px;
-    padding-left: 40px;
-    color: cornflowerblue;
+    padding: 25px 0px 40px 40px;
+}
+
+.lien a {
+    background: linear-gradient(151.22deg, #8348FF -13.04%, #0785F3 83.6%);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 17px;
+    padding: 7px 25px;
+    border-radius: 20px;
 }
 
 .error {
@@ -94,4 +181,37 @@
     padding-top: 20px;
     font-size: 1.2em;
     color: brown;
+}
+
+.content-footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    padding: 50px 0 80px;
+}
+
+.content-footer .footer-left {
+    width: 500px;
+}
+
+.content-footer .footer-left .services-list {
+    padding-top: 10px;
+}
+
+.content-footer .footer-left .services-list li {
+    padding-bottom: 5px;
+}
+
+.content-footer .footer-right {
+    width: 500px;
+}
+
+.content-footer .footer-right h3 {
+    padding-bottom: 10px;
+}
+
+.color {
+    color: white;
 }

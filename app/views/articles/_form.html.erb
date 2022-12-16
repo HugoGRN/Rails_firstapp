@@ -14,17 +14,19 @@
 </div>
 
 <div class="form">
-    <%= form_for @article do |f| %>
-        <p>
-            <%= f.label :title %><br>
-            <%= f.text_field :title %>
-        </p>
-        <p>
-            <%= f.label :description %><br>
-            <%= f.text_area :description %>
-        </p>
-        <p>
-            <%= f.submit %>
-        </p>
-    <% end %>
+    <div class="box">
+        <%= form_for @article do |f| %>
+            <div class="champ">
+                <%= f.label :titre %><br>
+                <%= f.text_field :title %>
+            </div>
+            <div class="champ">
+                <%= f.label :description %><br>
+                <%= f.text_area :description %>
+            </div>
+            <div class="champ-button">
+                <%= f.submit %>
+            </div>
+        <% end %>
+    </div>
 </div>

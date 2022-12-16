@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-    before_action :set_article, only: [:edit, :show, :destroy]
+    before_action :set_article, only: [:edit, :show, :destroy, :update]
 
     def index
         @articles = Article.all
@@ -15,6 +15,7 @@ class ArticlesController < ApplicationController
     end
 
     def create
+        @article = Article.new(article_params)
         if @article.save
             flash[:notice] = "Nouvelle article créé"
             redirect_to article_path(@article)
