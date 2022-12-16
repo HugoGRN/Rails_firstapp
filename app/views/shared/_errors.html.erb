@@ -1,0 +1,16 @@
+<% if obj.errors.any? %>
+    <div class="error-form">
+        <div class="box">
+            <div class="title-error">
+                <h2><%= pluralize(obj.errors.count, "erreur") %> :</h2>
+                <div class="body-error">
+                    <ul>
+                        <% obj.errors.full_messages.each do |msg| %>
+                            <li>- <%= msg %></li>
+                        <% end %>
+                    </ul>   
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>
