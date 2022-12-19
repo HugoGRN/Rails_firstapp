@@ -5,31 +5,5 @@
     <div class="lien">
         <%= link_to 'Créer un article', new_article_path, class: "lien-btn" %>
     </div>
-    <div class="form">
-        <table class="form-table">
-            <thead>
-                <tr>
-                    <th>Titre</th>
-                    <th>Description</th>
-                    <th>Auteur</th>
-                    <th>Date</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% @articles.each do |article| %>
-                    <tr>
-                        <td> <%= link_to article.title, article_path(article) %> </td>
-                        <td> <%= link_to truncate(article.description, length: 60 ), article_path(article) %> </td>
-                        <td> <%= article.user.username if article.user_id? %> </td>
-                        <td> <%= time_tag(article.created_at) %> </td>
-                        <td> 
-                            <%= link_to 'Modifier', edit_article_path(article) %>
-                            <%= link_to 'Supprimer', article_path(article), data: { "turbo-method": :delete } %>
-                        </td>
-                    </tr>
-                <% end %>
-            </tbody>
-        </table>
-    </div>
+   <%= render 'articles', obj: @articles %>
 </div>

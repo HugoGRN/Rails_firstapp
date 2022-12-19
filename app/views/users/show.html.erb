@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>Bienvenue <%= @user.username %> </h1>
+</div>
+
+<div class="form-title">
+    <h4>Articles publiés</h4>
+</div>
+
+<%= render 'articles/articles', obj: @user.articles %>

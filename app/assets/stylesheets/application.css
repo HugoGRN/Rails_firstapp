@@ -134,6 +134,21 @@ th, td {
     padding-bottom: 60px;
 }
 
+.form-title {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.box-show {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    width: 50%;
+    background-color: white;
+    height: 400px;
+}
+
 .box {
     display: flex;
     flex-direction: column;
