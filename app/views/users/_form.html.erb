@@ -1,0 +1,25 @@
+<%= render 'shared/errors', obj: @user %>
+
+<div class="form">
+    <div class="box-sign-up">
+        <div class="sign-up">
+            <%= form_for @user do |f| %>
+                <div class="champ">
+                    <%= f.label :Nom_utilisateur %><br>
+                    <%= f.text_field :username, placeholder: "Votre Username" %>
+                </div>
+                <div class="champ">
+                    <%= f.label :email %><br>
+                    <%= f.text_field :email, placeholder: "Votre email" %>
+                </div>            
+                <div class="champ">
+                    <%= f.label :password %><br>
+                    <%= f.password_field :password, placeholder: "Votre mot de passe" %>
+                </div>
+                <div class="champ-button">
+                    <%= f.submit(@user.new_record? ? "S'inscrire" : "Modifier") %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
