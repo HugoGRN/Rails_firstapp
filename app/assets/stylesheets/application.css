@@ -306,6 +306,7 @@ th, td {
 }
 
 .title-article {
+    color: #333;
     margin-bottom: 40px;
     font-size: 1.4em;
 }
