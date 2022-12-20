@@ -6,4 +6,5 @@
     <h4>Articles publiés</h4>
 </div>
 
-<%= render 'articles/articles', obj: @user.articles %>
+<%= render 'articles/articles', obj: @user_articles %>
+<%= will_paginate @user_articles %>

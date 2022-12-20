@@ -5,6 +5,7 @@ ruby "3.1.2"
 
 gem "rails", "~> 7.0.4"
 gem 'bcrypt', '~> 3.1.7'
+gem 'will_paginate', '~> 3.3'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

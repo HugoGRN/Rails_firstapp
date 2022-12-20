@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Se connecter</h1>
+</div>
+
+<div class="form">
+    <div class="box-sign-up">
+        <div class="sign-up">
+            <%= form_for :session, url: login_path do |f| %>
+                <div class="champ">
+                    <%= f.label :email %><br>
+                    <%= f.text_field :email, placeholder: "Votre email" %>
+                </div>            
+                <div class="champ">
+                    <%= f.label :password %><br>
+                    <%= f.password_field :password, placeholder: "Votre mot de passe", autocomplete: "off" %>
+                </div>
+                <div class="champ-button">
+                    <%= f.submit "Se connecter" %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
