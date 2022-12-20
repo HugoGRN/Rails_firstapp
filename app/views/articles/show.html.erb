@@ -13,5 +13,11 @@
                 <p> <%= @article.description %> </p>
             </div>
         </div>
+        <% if @article.user %>
+            <div class="auteur-article">
+                <p>Par</p>
+                <%= link_to @article.user.username, user_path(@article.user) %>
+            </div>
+        <% end %>
     </div>
 </div>

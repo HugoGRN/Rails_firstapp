@@ -1,5 +1,5 @@
 <div class="message-form">
-    <div class="form">
+    <div class="box-message">
         <% flash.each do |name, msg| %>
             <div class='alert-<%= "#{name}" %>'>
                 <%= content_tag :div, msg, :id => "flash-#{name}" if msg.is_a?(String) %>
