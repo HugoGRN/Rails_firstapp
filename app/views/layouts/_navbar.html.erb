@@ -5,6 +5,12 @@
         <ul>
             <li><%= link_to 'About', about_path %></li>
             <li><%= link_to 'Blog', blog_path %></li>
+            <% if logged_in? %>
+                <li><%= link_to 'Déconnexion', logout_path, method: :delete %></li>
+            <% else %>
+                <li><%= link_to "S'inscrire", signup_path %></li>
+                <li><%= link_to 'Se connecter', login_path %></li>
+            <% end %>
         </ul>
     </div>
 </nav>
