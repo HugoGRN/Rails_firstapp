@@ -68,7 +68,7 @@ footer {
 }
 
 .form-table {
-    width: 89%;
+    width: 80%;
     border-collapse: collapse;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
@@ -101,6 +101,10 @@ footer {
 th, td {
     padding: 15px 0px 15px 15px;
     text-align: start;
+}
+
+td {
+    font-size: 17px;
 }
 
 .form {
@@ -411,7 +415,7 @@ th, td {
 }
 
 .box-users {
-    background-color: white;
+    background-color: rgb(230, 230, 230);
     border: 1px solid rgb(179, 179, 179);
     border-radius: 10px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
@@ -421,12 +425,18 @@ th, td {
 }
 
 .username {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-weight: bold;
     font-size: 18px;
+}
+
+.username a {
+    padding: 0;
     background: linear-gradient(151.22deg, #8348FF -13.04%, #0785F3 83.6%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .info-user {

@@ -1,6 +1,6 @@
 <div class="body"> 
    <div class="form-show">
-        <% if logged_in? and current_user == @article.user %>
+        <% if logged_in? and (current_user == @article.user or current_user.admin?) %>
             <%= link_to "Modifier l'article", edit_article_path(@article), class: "lien-btn" %>
             <%= link_to 'Supprimer', article_path(@article), data: { "turbo-method": :delete }, class: "lien-btn" %>
         <% end %>
