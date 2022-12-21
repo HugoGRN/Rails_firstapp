@@ -1,16 +1,21 @@
 
 <nav class="navbar">
-    <%= link_to 'Home', home_path, class:"logo" %>
-    <div class="nav-links">
-        <ul>
-            <li><%= link_to 'About', about_path %></li>
-            <li><%= link_to 'Blog', blog_path %></li>
-            <% if logged_in? %>
-                <li><%= link_to 'Déconnexion', logout_path, method: :delete %></li>
-            <% else %>
-                <li><%= link_to "S'inscrire", signup_path %></li>
-                <li><%= link_to 'Se connecter', login_path %></li>
-            <% end %>
-        </ul>
-    </div>
+<%= link_to 'Home', home_path, class:"logo" %>
+    <ul>
+        <li><%= link_to 'About', about_path %></li>
+        <li><%= link_to 'Blog', blog_path %></li>
+        <li><%= link_to 'Utilisateurs', users_path %></li>
+        <% if logged_in? %>
+            <li><a href="#">Profil</a>
+                <ul>
+                    <li><%= link_to 'Mon compte', user_path(current_user) %></li>
+                    <li><%= link_to 'Modifier profil', edit_user_path(current_user) %></li>
+                    <li><%= link_to 'Déconnexion', logout_path, method: :delete %></li>
+                </ul>
+            </li>
+        <% else %>
+            <li><%= link_to "S'inscrire", signup_path %></li>
+            <li><%= link_to 'Se connecter', login_path %></li>
+        <% end %>
+    </ul>
 </nav>

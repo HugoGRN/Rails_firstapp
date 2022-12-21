@@ -27,7 +27,7 @@ html {
 }
 
 body {
-    min-height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -39,38 +39,14 @@ footer {
     display: flex;
 }
 
-.navbar {
-    width: 100%;
-    height: 100px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    box-sizing: border-box;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-}
-
 .logo {
     padding-left: 60px;
     font-size: 3em;
+    font-weight: bold;
     background: linear-gradient(151.22deg, #8348FF -13.04%, #0785F3 83.6%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-}
-
-.navbar a {
-    color: rgba(85, 85, 85, 1);
-}
-
-.navbar .nav-links ul {
-    display: flex;
-}
-
-.navbar .nav-links ul li {
-    margin: 0 30px;
-    padding-right: 60px;
 }
 
 .container {
@@ -468,4 +444,51 @@ th, td {
 
 .current, a {
     padding: 0px 5px;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    top: 0; left: 0; right: 0;
+    background: white;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+}
+
+.navbar ul li {
+    float: left;
+}
+
+.navbar ul li a {
+    color: #333;
+    padding: 20px;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    background: linear-gradient(151.22deg, #8348FF -13.04%, #0785F3 83.6%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.navbar ul li ul {
+    position: absolute;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.5);
+    display: none;
+}
+
+.navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgb(241, 241, 241);
+}
+
+.navbar ul li:hover > ul {
+    display: initial;
 }
